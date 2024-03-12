@@ -3,9 +3,11 @@ import TechStats from "./TechStats";
 
 const AboutMe = () => {
   return (
-    <div>
-      <p className="font-bold uppercase text-xl mb-5">About me</p>
-      <div className="flex flex-col gap-4 lg:leading-7 lg:text-base text-sm leading-normal">
+    <section className="relative">
+      <p className="font-bold  uppercase text-xl mb-5 sticky max-sm:bg-black/50 p-2 top-0 backdrop-blur-sm lg:hidden md:hidden">
+        About me
+      </p>
+      <div className="flex flex-col font-body gap-4 lg:leading-7 lg:text-base text-sm leading-normal">
         <p>
           My journey into the world of web development began in the early
           2023.As i was a graphic designer back then so i decide to expertise
@@ -23,7 +25,7 @@ const AboutMe = () => {
         </p>
       </div>
       <TechStats />
-    </div>
+    </section>
   );
 };
 
