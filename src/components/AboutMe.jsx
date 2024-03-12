@@ -13,7 +13,7 @@ const AboutMe = () => {
           design skills to that.Since then, I've been on a mission to
           continuously improve my skills and try to catch up with the latest
           trends and technologies in the ever-evolving landscape of frontend
-          development.
+          development.And i feel like i'm ready to dive into a real world.
         </p>
         <p>
           Proficient in HTML, CSS, and JavaScript, I specialize in creating
