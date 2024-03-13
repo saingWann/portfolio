@@ -9,7 +9,7 @@ const Home = () => {
 
   //   console.log(activeTab);
   return (
-    <main className="max-w-screen lg:min-h-screen md:min-h-screen max-sm:h-fit text-white md:px-10 bg-gray-950">
+    <main className="max-w-screen lg:min-h-screen md:min-h-screen max-sm:h-fit text-white md:px-10 bg-gradient-to-r from-gray-900 to-gray-950">
       {/* <div className="relative h-screen"> */}
 
       <Container>

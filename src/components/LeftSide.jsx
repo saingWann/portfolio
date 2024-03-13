@@ -15,14 +15,14 @@ const LeftSide = () => {
           className="flex gap-2
           flex-col max-sm:px-4"
         >
-          <div className="lg:text-4xl font-main uppercase font-bold text-2xl max-sm:mt-8 flex max-sm:flex-col">
+          <div className="lg:text-4xl font-main uppercase font-bold text-2xl max-sm:mt-8 flex max-sm:flex-col ">
             <p>sai than tun sein</p>
-            <span className="text-gray-500"> &lt; Day /&gt;</span>
+            <span className="text-gray-500 text-xl"> &lt; Day /&gt;</span>
           </div>
           <p className="capitalize">frontend web developer</p>
         </div>
 
-        <div className="mt-14 lg:flex font-main flex-col gap-2 md:flex hidden">
+        <div className="mt-14 lg:flex font-main flex-col lg:gap-6 gap-2 md:flex hidden">
           {tabs.map((tab, index) => (
             <a
               key={index}
@@ -33,12 +33,14 @@ const LeftSide = () => {
             >
               <div
                 className={` h-[1px] rounded-full bg-white transition-all duration-200 ${
-                  activeTab === tab ? "w-16" : "w-1"
+                  activeTab === tab ? "w-20" : "w-6"
                 }`}
               ></div>
               <p
-                className={`capitalize ${
-                  activeTab === tab ? "font-bold" : "font-normal"
+                className={`capitalize transition-all duration-200 rounded-lg ${
+                  activeTab === tab
+                    ? "font-bold bg-white text-black px-3 py-1"
+                    : "font-normal"
                 }`}
               >
                 {tab}
@@ -48,14 +50,35 @@ const LeftSide = () => {
         </div>
 
         <div className="flex gap-10 lg:mt-80 mt-7 max-sm:px-4">
-          <a href="https://github.com/saingWann" target="blank">
-            <Github />
+          <a
+            href="https://github.com/saingWann"
+            target="blank"
+            className="relative group"
+          >
+            <p className="absolute -top-20 -left-4 opacity-0 bg-white text-black px-3 py-1 text-xs rounded-full group-hover:-top-10 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+              GitHub
+            </p>
+            <Github className="hover:text-purple-900" />
           </a>
-          <a href="" target="blank">
-            <Linkedin />
+          <a
+            href="https://github.com/saingWann"
+            target="blank"
+            className="relative group"
+          >
+            <p className="absolute -top-20 -left-4 opacity-0 bg-white text-black px-3 py-1 text-xs rounded-full group-hover:-top-10 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+              LinkIn
+            </p>
+            <Linkedin className="hover:text-purple-900" />
           </a>
-          <a href="" target="blank">
-            <StickyNote />
+          <a
+            href="https://github.com/saingWann"
+            target="blank"
+            className="relative group"
+          >
+            <p className="absolute -top-20 -left-4 opacity-0 bg-white text-black px-3 py-1 text-xs rounded-full group-hover:-top-10 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+              Resume
+            </p>
+            <StickyNote className="hover:text-purple-900" />
           </a>
         </div>
       </div>

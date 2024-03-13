@@ -20,7 +20,7 @@ const TechStats = () => {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.05 * index, ease: "easeInOut" }}
+              transition={{ delay: 0.05 * index, ease: [0.22, 1, 0.36, 1] }}
               key={index}
               className="lg:px-4 font-body lg:py-2 p-2 lg:text-sm text-xs  bg-gray-200 text-black rounded-xl"
             >
@@ -37,7 +37,7 @@ const TechStats = () => {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.05 * index, ease: "easeInOut" }}
+              transition={{ delay: 0.1 * index, ease: [0.22, 1, 0.36, 1] }}
               key={index}
               className="lg:px-4 lg:py-2 p-2 lg:text-base text-xs font-body bg-gray-200 text-black rounded-xl"
             >

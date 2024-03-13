@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Home } from "./components";
 import { motion, useScroll, useSpring } from "framer-motion";
+import MouseTrailer from "./components/MouseTrailer";
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -17,6 +18,7 @@ const App = () => {
         style={{ scaleX }}
       />
       <Home />
+      <MouseTrailer />
     </>
   );
 };

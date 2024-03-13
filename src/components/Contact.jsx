@@ -1,14 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion";
+import MyTextInput from "./InputElement";
+import { Form, Formik } from "formik";
+import TextArea from "./TextArea";
+import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const sendEmail = (value, { setSubmitting, resetForm }) => {
+    emailjs
+      .sendForm(
+        "service_e77ppzz",
+        "template_fykv0ku",
+        "#email_form",
+        "KGXTkLRVxcFX2wkq-"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          resetForm();
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+        }
+      )
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
+
   return (
     <>
       <motion.section
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="text-white body-font relative w-full"
+        className="text-white body-font relative w-full mb-10"
       >
         <div className="container  mx-auto flex">
           <div className=" rounded-lg flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
@@ -18,32 +45,46 @@ const Contact = () => {
             <p className="lg:text-base text-xs mb-5 text-gray-300 font-body">
               Feel free to contact me and i will get back to you ASAP.
             </p>
-            <div className="relative mb-4 font-body">
-              <label htmlFor="email" className="leading-7 text-sm ">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email address"
-                className="w-full bg-white rounded border border-gray-300 text-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <div className="relative mb-4 font-body">
-              <label htmlFor="message" className="leading-7 text-sm ">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Leave a message here..."
-                className="w-full bg-white rounded-md text-gray-700 focus:border-gray-500 focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <button className="text-white bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 hover:text-white rounded text-lg transition-all duration-150">
-              Button
-            </button>
+            <Formik
+              initialValues={{
+                name: "",
+                email: "",
+                message: "",
+              }}
+              validationSchema={Yup.object({
+                email: Yup.string().required("* Enter your email address."),
+                message: Yup.string().required(
+                  "* Please add some message to send."
+                ),
+                name: Yup.string().required("* Please your name."),
+              })}
+              onSubmit={sendEmail}
+            >
+              <Form id="email_form" className="flex flex-col">
+                <MyTextInput
+                  label="Name"
+                  id="name"
+                  name="name"
+                  placeholder="your name please"
+                  type="text"
+                />
+                <MyTextInput
+                  label="Email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter email address"
+                  type="email"
+                />
+                <TextArea label="Message" name="message" id="message" />
+
+                <button
+                  type="submit"
+                  className="text-white bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 hover:text-white rounded text-lg transition-all duration-150"
+                >
+                  Send
+                </button>
+              </Form>
+            </Formik>
           </div>
         </div>
       </motion.section>
