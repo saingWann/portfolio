@@ -42,7 +42,7 @@ const Contact = () => {
             <h2 className=" font-bold uppercase text-xl font-main border-b-2 mb-2 ">
               Hit me up.
             </h2>
-            <p className="lg:text-base text-xs mb-5 text-gray-300 font-body">
+            <p className="lg:text-base text-xs text-gray-300 font-body">
               Feel free to contact me and i will get back to you ASAP.
             </p>
             <Formik
@@ -79,9 +79,9 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="text-white bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 hover:text-white rounded text-lg transition-all duration-150"
+                  className="text-white bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 active:bg-purple-400 hover:text-white rounded text-lg transition-all duration-150 "
                 >
-                  Send
+                  <p className="font-bold">Send</p>
                 </button>
               </Form>
             </Formik>

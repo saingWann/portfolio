@@ -11,7 +11,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      className="px-4 max-sm:p-0 group lg:my-0 my-5"
+      className="lg:px-4 max-sm:p-0 group lg:my-0 my-5"
     >
       <h1 className="font-bold font-main mb-3 border-b-2 lg:text-2xl text-xl">
         {name}

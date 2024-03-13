@@ -15,7 +15,7 @@ const Home = () => {
       <Container>
         <div className="flex flex-col lg:flex-row md:flex-row gap-10 ">
           {/* left side */}
-          <section className="lg:w-1/2 w-full h-[100%] lg:sticky lg:top-0 lg:pt-28 md:pt-24 z-10">
+          <section className="lg:w-1/2 w-full h-[100%] lg:sticky md:sticky md:top-0  lg:top-0 lg:pt-28 md:pt-24 z-10">
             <LeftSide />
           </section>
 

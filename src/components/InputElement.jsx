@@ -5,7 +5,7 @@ const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <label className="font-bold" htmlFor={props.id || props.name}>
+      <label className="font-bold mt-4" htmlFor={props.id || props.name}>
         {label}
       </label>
       <input
