@@ -5,6 +5,29 @@ import { Form, Formik } from "formik";
 import TextArea from "./TextArea";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
+// alert
+const test = () => {
+  Swal.fire({
+    title: "Your Email got me well.",
+    icon: "success",
+    toast: true,
+    timer: 3000,
+    showConfirmButton: false,
+    position: "top-right",
+    customClass: {
+      container: "alert-container",
+      title: "alert-message",
+      icon: "alert-icon",
+    },
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+};
 
 const Contact = () => {
   const sendEmail = (value, { setSubmitting, resetForm }) => {
@@ -27,6 +50,8 @@ const Contact = () => {
       .finally(() => {
         setSubmitting(false);
       });
+
+    test();
   };
 
   return (

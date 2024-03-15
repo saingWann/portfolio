@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../lib";
 
 const Project = () => {
@@ -23,11 +23,13 @@ const Project = () => {
       <p className="font-bold uppercase text-xl sticky max-sm:bg-gradient-to-r/80 from-gray-900 to-gray-950 p-2 top-0 backdrop-blur-sm z-10 lg:hidden md:hidden">
         Projects
       </p>
-      <div className="flex flex-col lg:gap-16 gap-8 ">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
+      <AnimatePresence mode="wait">
+        <div className="flex flex-col lg:gap-16 gap-8 ">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </AnimatePresence>
     </section>
   );
 };

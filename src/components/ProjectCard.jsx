@@ -11,6 +11,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
+      exit={{ opacity: 0, y: -100 }}
       className="lg:px-4 max-sm:p-0 group lg:my-0 my-5"
     >
       <h1 className="font-bold font-main mb-3 border-b-2 lg:text-2xl text-xl">
@@ -31,13 +32,17 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
           <img src={img} alt="website preview imgage" className="rounded-lg" />
         </div>
         <div>
-          <p
-            className={`mt-4 font-body lg:text-base text-sm overflow-hidden transition-all duration-300 ease-in-out ${
-              showMore ? "h-fit " : "h-24 line-clamp-4"
-            }`}
+          <motion.p
+            initial={{ height: 100 }}
+            animate={showMore ? { height: "auto" } : { height: 100 }}
+            transition={{ duration: 0.5 }}
+            className={`mt-4 font-body lg:text-base text-sm overflow-hidden transition-all ease-in-out ${
+              showMore ? "" : "lg:line-clamp-4 line-clamp-5"
+            }
+            `}
           >
             {descripiton}
-          </p>
+          </motion.p>
 
           <p
             className="underline cursor-pointer hover:text-gray-500"
@@ -47,6 +52,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
           >
             {showMore ? "see less" : "see more"}
           </p>
+
           <div className="mt-8 flex gap-2 items-center flex-wrap">
             {techStats.map((stat, index) => (
               <span
