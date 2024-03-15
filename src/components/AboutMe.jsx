@@ -2,11 +2,26 @@ import React from "react";
 import TechStats from "./TechStats";
 import { setActiveTab } from "../features/activeTab";
 import { useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const dispatch = useDispatch();
   return (
     <section className="relative">
+      <motion.div
+        initial={{ height: 800 }}
+        animate={{ height: 0 }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.3, 0.7] }}
+        className="w-1/2 h-full origin-top lg:bg-gradient-to-rfrom-gray-900 to-gray-950 md:bg-gradient-to-r
+         fixed hidden top-0 right-0  z-20  max-sm:opacity-80 overflow-hidden md:flex lg:flex justify-start items-center"
+      >
+        <p
+          className="  w-full   
+         text-3xl text-white text-center font-main "
+        >
+          About Me.
+        </p>
+      </motion.div>
       <p className="font-bold  uppercase text-xl lg:mb-5 sticky max-sm:bg-gradient-to-r/80 from-gray-900 to-gray-950 lg:p-2 py-2 top-0 backdrop-blur-sm lg:hidden md:hidden">
         About me
       </p>

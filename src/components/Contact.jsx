@@ -56,6 +56,20 @@ const Contact = () => {
 
   return (
     <>
+      <motion.div
+        initial={{ height: 800 }}
+        animate={{ height: 0 }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.3, 0.7] }}
+        className="w-1/2 h-full origin-top lg:bg-gradient-to-rfrom-gray-900 to-gray-950 md:bg-gradient-to-r
+         fixed hidden top-0 right-0  z-20  max-sm:opacity-80 overflow-hidden md:flex lg:flex justify-start items-center"
+      >
+        <p
+          className="  w-full   
+         text-3xl text-white text-center font-main "
+        >
+          Contact
+        </p>
+      </motion.div>
       <motion.section
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

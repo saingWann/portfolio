@@ -5,6 +5,17 @@ import { motion, useInView } from "framer-motion";
 
 const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
   const [showMore, setShowMore] = useState(false);
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    const toggle = () => {
+      setShowScroll(false);
+    };
+    // the scroll animator will umount when user start to scroll
+    window.addEventListener("scroll", toggle);
+
+    return () => window.addEventListener("scroll", toggle);
+  }, []);
 
   return (
     <motion.div
@@ -65,14 +76,14 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
           </div>
         </div>
       </div>
-      {/* {show && name === "KeepOnTrack" && (
+      {showScroll && name === "KeepOnTrack" && (
         <motion.div className="relative w-full flex flex-col justify-center items-center">
           <div className="icon-scroll"></div>
           <p className="absolute text-center ml-[2rem] mt-[15rem]">
             scroll down to see more
           </p>
         </motion.div>
-      )} */}
+      )}
     </motion.div>
   );
 };
