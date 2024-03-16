@@ -46,7 +46,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
           <motion.p
             initial={{ height: 100 }}
             animate={showMore ? { height: "auto" } : { height: 100 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className={`mt-4 font-body lg:text-base text-sm overflow-hidden transition-all ease-in-out ${
               showMore ? "" : "lg:line-clamp-4 line-clamp-5"
             }

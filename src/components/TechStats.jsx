@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const TechStats = () => {
-  const skills = ["HTML", "CSS", "React", "JavaScript", "NodeJs"];
+  const skills = ["HTML", "CSS", "React", "JavaScript", "TypeScript", "NodeJs"];
   const others = [
     "Tailwind",
     "Bootstrap",

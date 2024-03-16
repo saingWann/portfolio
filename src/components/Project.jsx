@@ -5,7 +5,7 @@ import { projects } from "../lib";
 
 const Project = () => {
   return (
-    <section className=" max-sm:mt-10 relative">
+    <section className=" max-sm:mt-10 lg:mb-10 md:mb-10 relative">
       <motion.div
         initial={{ height: 800 }}
         animate={{ height: 0 }}
@@ -17,14 +17,14 @@ const Project = () => {
           Day.webdev
         </p>
         <p
-          className="absolute lg:inline-block hidden w-full text-center
-         text-3xl text-white font-main "
+          className="  w-full   
+         text-3xl text-white text-center font-main "
         >
           Projects Gallery.
         </p>
       </motion.div>
       <p className="font-bold uppercase text-xl sticky max-sm:bg-gradient-to-r/80 from-gray-900 to-gray-950 p-2 top-0 backdrop-blur-sm z-10 lg:hidden md:hidden">
-        Projects
+        Projects.
       </p>
       <AnimatePresence mode="wait">
         <div className="flex flex-col lg:gap-16 gap-8 ">

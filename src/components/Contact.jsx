@@ -67,7 +67,7 @@ const Contact = () => {
           className="  w-full   
          text-3xl text-white text-center font-main "
         >
-          Contact
+          Contact.
         </p>
       </motion.div>
       <motion.section
@@ -79,7 +79,7 @@ const Contact = () => {
         <div className="container  mx-auto flex">
           <div className=" rounded-lg flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
             <h2 className=" font-bold uppercase text-xl font-main border-b-2 mb-2 ">
-              Hit me up.
+              Hit me up
             </h2>
             <p className="lg:text-base text-xs text-gray-300 font-body">
               Feel free to contact me and i will get back to you ASAP.

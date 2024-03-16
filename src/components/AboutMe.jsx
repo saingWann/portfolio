@@ -23,7 +23,7 @@ const AboutMe = () => {
         </p>
       </motion.div>
       <p className="font-bold  uppercase text-xl lg:mb-5 sticky max-sm:bg-gradient-to-r/80 from-gray-900 to-gray-950 lg:p-2 py-2 top-0 backdrop-blur-sm lg:hidden md:hidden">
-        About me
+        About me.
       </p>
       <div className="flex flex-col font-body gap-4 lg:leading-7 lg:text-base text-sm leading-normal text-slate-100">
         <p>
@@ -43,8 +43,10 @@ const AboutMe = () => {
           Proficient in HTML, CSS, and JavaScript, I specialize in creating
           visually stunning and{" "}
           <span className=" text-purple-400 font-bold">responsive</span> layouts
-          and seamless{" "}
-          <span className=" text-purple-400 font-bold">user interactions</span>{" "}
+          and{" "}
+          <span className=" text-purple-400 font-bold">
+            seamless user interactions
+          </span>{" "}
           that leave a lasting impression.In my portfolio, you'll discover a
           curated collection of{" "}
           <span
