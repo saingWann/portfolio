@@ -79,8 +79,8 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
       {showScroll && name === "KeepOnTrack" && (
         <motion.div className="relative w-full flex flex-col justify-center items-center">
           <div className="icon-scroll"></div>
-          <p className="absolute text-center ml-[2rem] mt-[15rem]">
-            scroll down to see more
+          <p className="absolute text-center ml-[2rem] mt-[15rem] text-slate-300">
+            Scroll down to see more projects.
           </p>
         </motion.div>
       )}

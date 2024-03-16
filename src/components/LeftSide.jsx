@@ -71,7 +71,7 @@ const LeftSide = () => {
             <Linkedin className="hover:text-purple-400" />
           </a>
           <a
-            href="https://github.com/saingWann"
+            href="https://drive.google.com/file/d/1Ut72yaAgF9jwpjbfGt2PATczMQQ2QEtv/view?usp=sharing"
             target="blank"
             className="relative group"
           >
