@@ -49,7 +49,7 @@ const LeftSide = () => {
           ))}
         </div>
 
-        <div className="flex gap-10 lg:mt-80 mt-7 max-sm:px-4">
+        <div className="flex gap-10 lg:mt-80 md:mt-72 mt-7 max-sm:px-4">
           <a
             href="https://github.com/saingWann"
             target="blank"
@@ -71,7 +71,7 @@ const LeftSide = () => {
             <Linkedin className="hover:text-purple-400" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1Ut72yaAgF9jwpjbfGt2PATczMQQ2QEtv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1cYf4wUv73wJTCVg9-Er-yn5mEOKTLnLA/view?usp=sharing"
             target="blank"
             className="relative group"
           >

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./Container";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { AboutMe, Contact, Project } from "./index";
 import LeftSide from "./LeftSide";
 

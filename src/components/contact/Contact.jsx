@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import MyTextInput from "./InputElement";
 import { Form, Formik } from "formik";
-import TextArea from "./TextArea";
+import TextArea from "../form-elements/TextArea";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import MyTextInput from "../form-elements/InputElement";
 
 // alert
 const test = () => {
@@ -15,6 +15,7 @@ const test = () => {
     toast: true,
     timer: 3000,
     showConfirmButton: false,
+    animation: false,
     position: "top-right",
     customClass: {
       container: "alert-container",
@@ -40,7 +41,7 @@ const Contact = () => {
       )
       .then(
         (response) => {
-          console.log("Email sent successfully:", response);
+          // console.log("Email sent successfully:", response);
           resetForm();
         },
         (error) => {
@@ -95,7 +96,7 @@ const Contact = () => {
                 message: Yup.string().required(
                   "* Please add some message to send."
                 ),
-                name: Yup.string().required("* Please your name."),
+                name: Yup.string().required("* Please fill your name."),
               })}
               onSubmit={sendEmail}
             >
@@ -118,7 +119,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="text-white bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 active:bg-purple-400 hover:text-white rounded text-lg transition-all duration-150 "
+                  className="text-white mt-3 bg-purple-900  border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 active:bg-purple-400 hover:text-white rounded text-lg transition-all duration-150 "
                 >
                   <p className="font-bold">Send</p>
                 </button>

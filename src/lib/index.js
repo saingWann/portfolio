@@ -14,6 +14,6 @@ techStats:  [ 'React', 'Redux Toolkit', "Tailwind","Framer Motion"]},
     {name: 'Password Generator',
 img: passwordGenerator,
 descripiton: "The Password Generator offers a range of customization options, allowing users to specify the length of the password, include various character types (such as uppercase letters, lowercase letters, numbers, and special characters).Upon selecting their preferences, users can generate a unique password with a single click. The frontend of the application was built using HTML, TailWind Css, and TypeScript to create an intuitive,user-friendly and responsive user interface.Implementing the password generation logic and handling user interactions with TypeScript.",
-siteUrl: 'https://randompassword-generator-webapp.netlify.app/',
+siteUrl: 'https://rpg-daydev.netlify.app/',
 techStats: ['TypeScript',"Tailwind"]},
 ]

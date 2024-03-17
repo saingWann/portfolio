@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects } from "../lib";
+import { projects } from "../../lib";
 
 const Project = () => {
   return (
@@ -17,7 +17,7 @@ const Project = () => {
           Day.webdev
         </p>
         <p
-          className="  w-full   
+          className="  w-full lg:inline-block md:inline-block hidden  
          text-3xl text-white text-center font-main "
         >
           Projects Gallery.

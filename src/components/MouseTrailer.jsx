@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const MouseTrailer = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
   const cursor = useRef(null);
 
   useEffect(() => {

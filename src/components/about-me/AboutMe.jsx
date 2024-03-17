@@ -1,8 +1,8 @@
 import React from "react";
 import TechStats from "./TechStats";
-import { setActiveTab } from "../features/activeTab";
 import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
+import { setActiveTab } from "../../features/activeTab";
 
 const AboutMe = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import "./scrollAnimation.css";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
   const [showMore, setShowMore] = useState(false);
@@ -80,7 +80,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
         <motion.div className="relative w-full flex flex-col justify-center items-center">
           <div className="icon-scroll"></div>
           <p className="absolute text-center ml-[2rem] mt-[15rem] text-slate-300">
-            Scroll down to see more projects.
+            Scroll to see more projects.
           </p>
         </motion.div>
       )}
