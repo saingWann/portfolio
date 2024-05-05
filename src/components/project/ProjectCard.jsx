@@ -21,7 +21,7 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.6 }}
       exit={{ opacity: 0, y: -100 }}
       className="lg:px-4 max-sm:p-0 group lg:my-0 my-5"
     >
@@ -77,9 +77,9 @@ const ProjectCard = ({ descripiton, name, techStats, img, siteUrl }) => {
         </div>
       </div>
       {showScroll && name === "KeepOnTrack" && (
-        <motion.div className="relative w-full flex flex-col justify-center items-center">
+        <motion.div className=" w-fit mx-auto mt-10 p-3 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center bg-white/10 relative z-10">
           <div className="icon-scroll"></div>
-          <p className="absolute text-center ml-[2rem] mt-[15rem] text-slate-300">
+          <p className=" text-center text-slate-300">
             Scroll to see more projects.
           </p>
         </motion.div>

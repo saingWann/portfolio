@@ -60,7 +60,7 @@ const LeftSide = () => {
             </p>
             <Github className="hover:text-purple-400" />
           </a>
-          <a
+          {/* <a
             href="https://github.com/saingWann"
             target="blank"
             className="relative group"
@@ -69,9 +69,9 @@ const LeftSide = () => {
               LinkIn
             </p>
             <Linkedin className="hover:text-purple-400" />
-          </a>
+          </a> */}
           <a
-            href="https://drive.google.com/file/d/1cYf4wUv73wJTCVg9-Er-yn5mEOKTLnLA/view?usp=sharing"
+            href="https://drive.google.com/file/d/1TOwen98ovwNP49ooaoL-tfwbJVz1fCyE/view?usp=sharing"
             target="blank"
             className="relative group"
           >
